@@ -1,0 +1,23 @@
+#!/bin/sh
+
+set -e
+
+lb config noauto \
+        --bootloaders "syslinux,grub-efi" \
+        --distribution "buster" \
+        --architectures "amd64" \
+        --archive-areas "main contrib non-free" \
+        --apt-recommends "true" \
+        --debian-installer-gui "true" \
+        --debian-installer "live" \
+        --bootappend-live "lang=fr_FR.UTF-8 locales=fr_FR.UTF-8 keyboard-layouts=fr splash timezone=Europe/Paris utc=yes keyboard-model=pc105 hostname=svprognu boot=live peristence components username=svpro_gnu" \
+        --bootappend-install "locales=fr_FR.UTF-8" \
+        --binary-images "iso-hybrid" \
+	--uefi-secure-boot "enable" \
+        --linux-flavours "amd64" \
+	--linux-packages "linux-image linux-headers" \
+	--iso-volume "SVPRO_GNU" \
+	--iso-application "SVPRO_GNU" \
+        --backports "false" \
+        --updates "true" \
+        "${@}"
