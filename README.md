@@ -13,3 +13,4 @@ lb build
 
 - [x] Installeur
 - [ ] Live Persistence
+- [ ] Yunohost
