@@ -8,3 +8,8 @@ Système d'exploitation x64 - 100% GNU basé sur Debian
 lb config
 lb build
 ```
+
+### ToDo
+
+- [x] Installeur
+- [ ] Live Persistence
