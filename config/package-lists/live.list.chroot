@@ -21,3 +21,5 @@ vlc
 curl
 git
 sshfs
+wget
+net-tools
