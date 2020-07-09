@@ -10,7 +10,7 @@ LB_APT_INDICES="true"
 
 # $LB_BOOTAPPEND_LIVE: set boot parameters
 # (Default: empty)
-LB_BOOTAPPEND_LIVE="lang=fr_FR.UTF-8 locales=fr_FR.UTF-8 keyboard-layouts=fr splash timezone=Europe/Paris utc=yes keyboard-model=pc105 hostname=svprognu boot=live peristence components username=svpro_gnu"
+LB_BOOTAPPEND_LIVE="lang=fr_FR.UTF-8 locales=fr_FR.UTF-8 keyboard-layouts=fr splash timezone=Europe/Paris utc=yes keyboard-model=pc105 hostname=svprognu boot=live persistence components username=svpro_gnu"
 
 # $LB_BOOTAPPEND_INSTALL: set boot parameters
 # (Default: empty)

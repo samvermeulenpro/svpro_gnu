@@ -1,9 +1,0 @@
-#!/bin/bash
-
-set -e
-
-wget -O /usr/local/bin/yunohost-install https://raw.githubusercontent.com/YunoHost/install_script/buster-unstable/install_yunohost
-chmod +x /usr/local/bin/yunohost-install
-/usr/local/bin/yunohost-install -a
-
-exit 0
