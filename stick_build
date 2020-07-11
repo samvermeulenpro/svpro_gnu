@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# stick_build /path/live-image.iso /dev/sdX
+
+# Copie de l'image iso sur clé
+dd if=$1 of=$2 bs=4M status=progress
+sync
+
+# Création de la partition dédiée à la persistence
+printf 'n\np\n\n\n\nw' | fdisk $2
+mkfs.ext4 -L persistence ${2}3
+
+# Configuratio de la partition
+mount ${2}3 /mnt
+echo / union > /mnt/persistence.conf
+umount /mnt
+
+# Fin
+echo "Terminé ! Vous pouvez booter sur la clé USB, la persistence sera auto-configurée lors du premier Boot !"
+
+
+exit 0
