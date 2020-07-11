@@ -1,0 +1,9 @@
+#!/bin/bash
+
+wget -O - http://linux-clients.seafile.com/seafile.key | apt-key add -
+echo 'deb [arch=amd64] http://linux-clients.seafile.com/seafile-deb/buster/ stable main' > /etc/apt/sources.list.d/seafile.list
+
+apt update
+apt install -y seafile-gui
+
+exit 0
