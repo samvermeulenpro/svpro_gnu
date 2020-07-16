@@ -4,13 +4,13 @@
 
 set -e
 
-ISO="live-svpro_gnu-amd64.iso"
+ISO="live_svpro_gnu-amd64.hybrid.iso"
 
 # Recuperation iso
 echo "Téléchargement de l'iso..."
 sleep 5
-wget -O ${ISO} https://nuage.svnet.fr/f/0566c7a699eb4960b2ef/?dl=1
-wget -O ${ISO}.md5 https://nuage.svnet.fr/f/06d1ae10101949bc84d9/?dl=1
+wget -O ${ISO} https://samuel.vermeulen.pro/telechargement/live_svpro_gnu-amd64.hybrid.iso
+wget -O ${ISO}.md5 https://samuel.vermeulen.pro/telechargement/live_svpro_gnu-amd64.hybrid.iso.md5
 echo "Vérification de l'image..."
 
 if ! md5sum -c ${ISO}.md5
