@@ -23,3 +23,6 @@ git
 sshfs
 wget
 net-tools
+qtpass
+davfs2
+xtightvncviewer
