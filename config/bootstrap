@@ -5,24 +5,8 @@
 LB_DISTRIBUTION="buster"
 
 # $LB_PARENT_DISTRIBUTION: select parent distribution to use
-# (Default: )
-LB_PARENT_DISTRIBUTION=""
-
-# $LB_DISTRIBUTION_CHROOT: select distribution to use in the chroot
 # (Default: buster)
-LB_DISTRIBUTION_CHROOT="buster"
-
-# $LB_PARENT_DISTRIBUTION_CHROOT: select parent distribution to use in the chroot
-# (Default: buster)
-LB_PARENT_DISTRIBUTION_CHROOT="buster"
-
-# $LB_DISTRIBUTION_BINARY: select distribution to use in the final image
-# (Default: buster)
-LB_DISTRIBUTION_BINARY="buster"
-
-# $LB_PARENT_DISTRIBUTION_BINARY: select parent distribution to use in the final image
-# (Default: buster)
-LB_PARENT_DISTRIBUTION_BINARY="buster"
+LB_PARENT_DISTRIBUTION="buster"
 
 # $LB_PARENT_DEBIAN_INSTALLER_DISTRIBUTION: select parent distribution for debian-installer to use
 # (Default: buster)

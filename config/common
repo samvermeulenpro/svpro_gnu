@@ -87,32 +87,26 @@ LB_TASKSEL="apt"
 # live-build options
 
 # $_BREAKPOINTS: enable breakpoints
-# If set here, overrides the command line option
 # (Default: false)
 #_BREAKPOINTS="false"
 
 # $_DEBUG: enable debug
-# If set here, overrides the command line option
 # (Default: false)
 #_DEBUG="false"
 
 # $_COLOR: enable color
-# If set here, overrides the command line option
 # (Default: false)
 #_COLOR="false"
 
 # $_FORCE: enable force
-# If set here, overrides the command line option
 # (Default: false)
 #_FORCE="false"
 
 # $_QUIET: enable quiet
-# If set here, overrides the command line option
 # (Default: false)
-#_QUIET="false"
+_QUIET="false"
 
 # $_VERBOSE: enable verbose
-# If set here, overrides the command line option
 # (Default: false)
 #_VERBOSE="false"
 
