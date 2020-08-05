@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# Creation de la clef ./build_svprognu -d /dev/sdX
+# Creation de l'iso seule ./build_svprognu
+
+set -e
+
+apt install -y live-build git
+git clone https://git.weblib.re/svpro/svpro_gnu.git
+cd svpro_gnu && git checkout $(git tag -l | tail -n 1)
+
+# Build iso
+lb clean
+lb config
+lb build
+ISO=$(ls *.iso)
+echo "ISO créée $(pwd)/$ISO"
+# Copie de l'image iso sur clé
+while getopts ":d " opt; do
+case $opt in
+   d)
+	echo "Transfert en cours..."
+	umount $OPTARG || true
+	dd if=${ISO} of=$OPTARG bs=4M status=progress
+	sync
+
+	# Création de la partition dédiée à la persistence
+	echo "Création de la persistence..."
+	sleep 5
+	printf 'n\np\n\n\n\nw' | fdisk $OPTARG
+	mkfs.ext4 -L persistence ${OPTARG}3
+
+	# Configuratio de la partition
+	mkdir -p ./tmp
+	mount ${OPTARG}3 ./tmp
+	echo "/ union" > ./tmp/persistence.conf
+	umount ./tmp
+
+	# Fin
+	echo "Terminé ! Vous pouvez booter sur la clé USB, la persistence sera auto-configurée lors du premier Boot !"
+	;;
+
+esac
+done
+
+exit 0
