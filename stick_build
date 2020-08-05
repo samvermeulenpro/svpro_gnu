@@ -9,11 +9,11 @@ ISO="live_svpro_gnu-amd64.hybrid.iso"
 # Recuperation iso
 echo "Téléchargement de l'iso..."
 sleep 5
-wget -O ${ISO} https://samuel.vermeulen.pro/telechargement/live_svpro_gnu-amd64.hybrid.iso
-wget -O ${ISO}.md5 https://samuel.vermeulen.pro/telechargement/live_svpro_gnu-amd64.hybrid.iso.md5
+wget -O ${ISO} https://cloud.weblib.re/s/iZ3RPAbJ7BXTmXc/download
+wget -O ${ISO}.md5sum https://cloud.weblib.re/s/GtSEtc4Gy8CGxFW/download
 echo "Vérification de l'image..."
 
-if ! md5sum -c ${ISO}.md5
+if ! md5sum -c ${ISO}.md5sum
 	then
 	echo "ISO Corompue. Abandon !!"
 	rm -f ${ISO} ${ISO}.md5
