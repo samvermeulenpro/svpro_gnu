@@ -12,7 +12,8 @@ lb build
 
 ## Création clef USB persistante
 ```
-./stick-build /dev/sdX
+./build_svprognu -d /dev/sdX # Création de la clef
+./build_svprognu # Création de l'iso seule
 ```
 
 ** N.B : Inutile de créer l'ISO, il sera téléchargé et installé sur la clef
