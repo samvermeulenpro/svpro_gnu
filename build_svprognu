@@ -16,7 +16,7 @@ lb build
 ISO=$(ls *.iso)
 echo "ISO créée $(pwd)/$ISO"
 # Copie de l'image iso sur clé
-while getopts ":d " opt; do
+while getopts ":d: " opt; do
 case $opt in
    d)
 	echo "Transfert en cours..."
