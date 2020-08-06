@@ -20,7 +20,6 @@ while getopts ":d " opt; do
 case $opt in
    d)
 	echo "Transfert en cours..."
-	umount $OPTARG || true
 	dd if=${ISO} of=$OPTARG bs=4M status=progress
 	sync
 
