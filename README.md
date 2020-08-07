@@ -3,7 +3,7 @@
 Système d'exploitation x64 - 100% GNU basé sur Debian
 
 ## Installation (root)
-### Generer iso seule
+### Générer ISO seule
 ```
 curl https://git.weblib.re/svpro/svpro_gnu/raw/branch/develop/build_svprognu | bash
 ```
@@ -14,8 +14,19 @@ curl https://git.weblib.re/svpro/svpro_gnu/raw/branch/develop/build_svprognu | b
 ```
 **La persistence sera configurée lors du 1er boot. Le démarrage peut prendre quelques minutes.
 
-## Installation physique
+### Installation physique
 Depuis le menu du live, choisir "Installation Graphique ou Experts"
+
+
+
+## Installation Dev avec live-build
+Cloner le dépôt puis :
+```
+apt install live-build
+cd <dossier du dépôt>
+lb config
+lb build
+```
 
 ### ToDo
 
