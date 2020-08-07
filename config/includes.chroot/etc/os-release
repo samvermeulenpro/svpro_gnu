@@ -1,0 +1,7 @@
+PRETTY_NAME="Debian SVPRO_GNU"
+NAME="SVPRO_GNU"
+ID=svprognu
+VERSION="1.0"
+VERSION_ID=1.0
+HOME_URL="https://git.weblib.re/svpro/svpro_gnu/wiki"
+SUPPORT_URL="https://git.weblib.re/svpro/svpro_gnu/"
