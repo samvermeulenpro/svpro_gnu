@@ -19,7 +19,7 @@ Depuis le menu du live, choisir "Installation Graphique ou Experts"
 
 
 
-## Installation Dev avec live-build
+## Build iso avec live-build (expoerts)
 Cloner le dépôt puis :
 ```
 apt install live-build
@@ -27,6 +27,11 @@ cd <dossier du dépôt>
 lb config
 lb build
 ```
+
+### Démo (Session Live via noVNC)
+En ligne uniquement en journée
+https://svprognu.weblib.re/
+
 
 ### ToDo
 
