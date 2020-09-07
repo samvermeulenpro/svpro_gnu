@@ -1,6 +1,9 @@
+# Base
 live-boot
 live-config
 live-config-systemd
+
+# System
 firmware-linux
 task-french-desktop
 task-xfce-desktop
@@ -8,34 +11,47 @@ lxde-icon-theme
 fonts-cantarell
 bluebird-gtk-theme
 terminator
-firefox-esr
-firefox-esr-l10n-fr
-thunderbird
-thunderbird-l10n-fr
 openssh-server
 nautilus
 plymouth-themes
-scribus
-inkscape
-vlc
 curl
 git
 sshfs
 wget
 net-tools
-qtpass
 davfs2
 xtightvncviewer
-nextcloud-desktop
-nautilus-nextcloud
 gparted
-flameshot
 dkms
+python3-pip
+
+# Graphiques
+scribus
+inkscape
+gimp
+flameshot
+
+# Multimedia
+vlc
 simplescreenrecorder
 openshot
 audacity
+
+# Utilitaires
+qtpass
+nextcloud-desktop
+nautilus-nextcloud
+
+# Internet
 pidgin
 remmina
 remmina-plugin-spice
 remmina-plugin-vnc
-python3-pip
+firefox-esr
+firefox-esr-l10n-fr
+thunderbird
+thunderbird-l10n-fr
+
+# Education
+gcompris
+childsplay
