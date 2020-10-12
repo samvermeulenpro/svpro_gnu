@@ -37,6 +37,7 @@ simplescreenrecorder
 openshot
 audacity
 kodi
+obs-studio
 
 # Utilitaires
 qtpass
@@ -52,7 +53,11 @@ firefox-esr
 firefox-esr-l10n-fr
 thunderbird
 thunderbird-l10n-fr
+chromium
 
 # Education
 gcompris
 childsplay
+
+# Virtualisation
+spice-vdagent
