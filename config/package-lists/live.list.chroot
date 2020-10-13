@@ -24,6 +24,7 @@ xtightvncviewer
 gparted
 dkms
 python3-pip
+cups
 
 # Graphiques
 scribus
