@@ -5,7 +5,7 @@
 
 set -e
 
-ISO="live-svpro_gnu-amd64.iso"
+ISO="live_svpro_gnu-amd64.hybrid.iso"
 
 # Recuperation iso
 echo "Téléchargement de l'iso..."
