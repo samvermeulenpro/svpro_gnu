@@ -5,6 +5,7 @@ live-config-systemd
 
 # System
 firmware-linux
+firmware-b43-installer
 task-french-desktop
 task-xfce-desktop
 lxde-icon-theme
