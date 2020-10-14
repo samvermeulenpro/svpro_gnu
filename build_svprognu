@@ -5,16 +5,22 @@
 
 set -e
 
-apt install -y live-build git
-git clone https://git.weblib.re/svpro/svpro_gnu.git
-cd svpro_gnu && git checkout $(git tag -l | tail -n 1)
+ISO="live-svpro_gnu-amd64.iso"
 
-# Build iso
-lb clean
-lb config
-lb build
-ISO=$(ls *.iso)
-echo "ISO créée $(pwd)/$ISO"
+# Recuperation iso
+echo "Téléchargement de l'iso..."
+sleep 5
+wget -O ${ISO} https://www.weblib.re/dokuwiki/_media/svpro_gnu:live_svpro_gnu-amd64.hybrid.iso
+wget -O ${ISO}.md5sum https://www.weblib.re/dokuwiki/_media/svpro_gnu:live_svpro_gnu-amd64.hybrid.iso.md5sum
+echo "Vérification de l'image..."
+
+if ! md5sum -c ${ISO}.md5sum
+	then
+	echo "ISO Corompue. Abandon !!"
+	rm -f ${ISO} ${ISO}.md5
+	exit 1
+fi
+
 # Copie de l'image iso sur clé
 while getopts ":d: " opt; do
 case $opt in
