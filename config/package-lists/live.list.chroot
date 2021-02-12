@@ -9,6 +9,7 @@ firmware-b43-installer
 task-french-desktop
 task-xfce-desktop
 lxde-icon-theme
+sddm
 fonts-cantarell
 bluebird-gtk-theme
 terminator
