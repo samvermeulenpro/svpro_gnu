@@ -44,7 +44,7 @@ case $opt in
 	umount ./tmp
 	echo "Finalisation..."
 	sleep 10
-	rm -f ./tmp
+	rm -rf ./tmp
 
 	# Fin
 	echo "Terminé ! Vous pouvez booter sur la clé USB, la persistence sera auto-configurée lors du premier Boot !"
