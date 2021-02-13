@@ -31,8 +31,10 @@ case $opt in
 
 	# Création de la partition dédiée à la persistence
 	echo "Création de la persistence..."
-	sleep 5
+	sleep 10
 	printf 'n\np\n\n\n\nw' | fdisk $OPTARG
+	echo "Formatage..."
+	sleep 10
 	mkfs.ext4 -L persistence ${OPTARG}3
 
 	# Configuratio de la partition
@@ -40,6 +42,9 @@ case $opt in
 	mount ${OPTARG}3 ./tmp
 	echo "/ union" > ./tmp/persistence.conf
 	umount ./tmp
+	echo "Finalisation..."
+	sleep 10
+	rm -f ./tmp
 
 	# Fin
 	echo "Terminé ! Vous pouvez booter sur la clé USB, la persistence sera auto-configurée lors du premier Boot !"
