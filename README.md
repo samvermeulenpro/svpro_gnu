@@ -1,6 +1,7 @@
 # svpro_gnu
 
 Système d'exploitation x64 - 100% GNU basé sur Debian
+Une distribution pouvant tourner sur une clé USB avec persistance des données
 
 ## Installation (root)
 ### Générer ISO seule
